@@ -77,7 +77,7 @@ public class Game {
             System.out.print(chararr[i] + "  |  ");
             for(int j = 0; j < grid[i].length; j++){
                 
-                System.out.print("O"+"  |  ");
+                System.out.print(grid[i][j]+" |  ");
             }
             System.out.println();
             if(i == 6){
@@ -145,7 +145,7 @@ public class Game {
         key = "cruiser";
         boolean x = false;
         do{
-            shipRow = random.nextInt(6);
+            shipRow = random.nextInt(6) + 1;
             shipCol = random.nextInt(6);
             if (checkSpots(tempGrid, shipCol, shipRow - 1, shipRow, shipRow + 1)) {
                 ships.put(key, new Ship());
@@ -208,7 +208,6 @@ public class Game {
         for (int index = 0; index < grid.length; index++) {
             for (int index2 = 0; index2 < grid[index].length; index2++) {
                 grind2.add(grid[index][index2]);
-                grid[index][index2] = " ";
             }
         }
     }
