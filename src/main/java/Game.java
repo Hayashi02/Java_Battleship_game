@@ -36,7 +36,7 @@ public class Game {
         }
         createCopy();
         placeShips();
-        for (int i = 0; i < 15; i++) {
+        for (int i = 0; i < 3; i++) {
 
             String in = getInput();           
             if(ships.get("battleship").containsCell(in)){
