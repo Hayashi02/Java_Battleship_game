@@ -36,7 +36,9 @@ public class Game {
         }
         createCopy();
         placeShips();
-        for (int i = 0; i < 3; i++) {
+
+        System.out.println("You have 15 chances to destroy 3 ships.");
+        for (int i = 0; i < 15; i++) {
 
             String in = getInput();           
             if(ships.get("battleship").containsCell(in)){
@@ -57,9 +59,7 @@ public class Game {
             }
 
         }
-        System.out.println("Total score: "+ playerScore);
-        
-        scanner.close();
+        System.out.println("Total score: "+ playerScore + "\n\n");
         return "";
     }
  
